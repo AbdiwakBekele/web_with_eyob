@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <input id="firstname" type="text">
+    <button id="click">Click</button>
+
+
+    <script>
+
+        var btn = document.getElementById("click");
+        var firstname = document.getElementById("firstname");
+
+        btn.addEventListener('click', () => {
+            console.log("clicked");
+        });
+
+        firstname.addEventListener('input', () => {
+            var data = firstname.value;
+            var length = data.length;
+
+            if (length >= 10) {
+                firstname.style.borderColor = 'red';
+            }
+
+        });
+
+
+        // Class and Object Example
+        class Animal {
+
+            canEat() {
+                console.log('eating');
+            }
+
+            hasSound() { }
+
+            canBreath() { }
+
+        }
+
+        class HumanBeing extends Animal {
+            canThink() { }
+        }
+
+        class Child extends HumanBeing {
+
+        }
+
+        var abdiwak = new HumanBeing();
+        abdiwak.canEat();
+
+    </script>
+</body>
+
+</html>
