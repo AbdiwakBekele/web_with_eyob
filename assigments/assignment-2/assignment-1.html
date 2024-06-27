@@ -15,7 +15,7 @@
   </head>
   <body>
     <p id="demo"></p>
-    <div class="alert alert-primary m-5">
+    <form id="myForm" class="alert alert-primary m-5">
       <input
         id="num1"
         type="text"
@@ -40,7 +40,7 @@
         class="form-control num"
         placeholder="enter a number"
       />
-
+      <!-- Check button -->
       <button
         onclick="compareNumbers()"
         type="button"
@@ -48,7 +48,19 @@
       >
         <i class="fa-solid fa-apple-whole"></i>check
       </button>
-    </div>
+
+      <!-- Clear form -->
+
+      <button
+      onclick="resetScreen()"
+      type="button"
+      class="btn btn-dark btn-lg clear-button"
+    >
+      <i class="fa-solid fa-apple-whole"></i>Clear
+    </button>
+
+
+  </form>
   </body>
   <script>
     var y = [];
@@ -88,7 +100,11 @@
 
     var z = [];
 
-
+    // Clear screen
+     function resetScreen() {
+  document.getElementById("myForm").reset();
+  location.reload();
+}
 
     // Compare the numbers
     function compareNumbers() {
