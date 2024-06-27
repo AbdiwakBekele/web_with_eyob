@@ -55,28 +55,28 @@
 
     var num1 = document.getElementById("num1");
     num1.addEventListener("input", () => {
-      var data1 = num1.value;
+      var data1 = Number(num1.value);
       y.push(data1);
       console.log(y);
     });
 
     var num2 = document.getElementById("num2");
     num2.addEventListener("input", () => {
-      var data2 = num2.value;
+      var data2 = Number(num2.value);
       y.push(data2);
       console.log(y);
     });
 
     var num3 = document.getElementById("num3");
     num3.addEventListener("input", () => {
-      var data3 = num3.value;
+      var data3 = Number(num3.value);
       y.push(data3);
       console.log(y);
     });
 
-    var num4 = document.getElementById("num4");
+    var num4 = (document.getElementById("num4"));
     num4.addEventListener("input", () => {
-      var data4 = num4.value;
+      var data4 = Number(num4.value);
       y.push(data4);
       console.log(y);
     });
@@ -88,31 +88,39 @@
 
     var z = [];
 
+
+
     // Compare the numbers
     function compareNumbers() {
       if (x.length == y.length) {
-        for (i = 0; i < x.length; i++) {
-          for (i = 0; i < y.length; i++) {
-            if (x[i] == y[i]) {
-              z.push(y[i]);
-              console.log(z);
-            } else {
-            }
+        for (i = 0; i<x.length; i++) {
+          for (j=0; j<y.length; j++) {
+            if (x[i] == y[j]) {
+            
+                z.push(y[j]);
+                // console.log(z);
+                if (z.length == y.length) {
+                  console.log('This is the Guthrie sequence for 8')
+              } 
+
+            else {
+            console.log('')};
           }
-        }
-      } else if (x.length == z.length) {
-        for (i = 0; i < x.length; i++) {
-          for (i = 0; i < y.length; i++) {
-            if (x[i] == y[i]) {
-              z.push(y[i]);
-            } else {
-              console.log("Error");
-            }
-            console.log(z)
+          
+              
+            
+              
           }
+
+     
+          
+          
         }
-      }
+       
+      } 
     }
+
+
   </script>
   <!-- Bootstrap CDN -->
   <script
