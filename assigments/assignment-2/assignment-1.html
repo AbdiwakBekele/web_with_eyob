@@ -69,28 +69,28 @@
     num1.addEventListener("input", () => {
       var data1 = Number(num1.value);
       y.push(data1);
-      console.log(y);
+      // console.log(y);
     });
 
     var num2 = document.getElementById("num2");
     num2.addEventListener("input", () => {
       var data2 = Number(num2.value);
       y.push(data2);
-      console.log(y);
+      // console.log(y);
     });
 
     var num3 = document.getElementById("num3");
     num3.addEventListener("input", () => {
       var data3 = Number(num3.value);
       y.push(data3);
-      console.log(y);
+      // console.log(y);
     });
 
     var num4 = (document.getElementById("num4"));
     num4.addEventListener("input", () => {
       var data4 = Number(num4.value);
       y.push(data4);
-      console.log(y);
+      // console.log(y);
     });
 
     var x = [8, 4, 2, 1];
@@ -99,6 +99,7 @@
     var c = [8, 4, 2];
 
     var z = [];
+    var show = document.getElementById("demo");
 
     // Clear screen
      function resetScreen() {
@@ -110,31 +111,54 @@
     function compareNumbers() {
       if (x.length == y.length) {
         for (i = 0; i<x.length; i++) {
-          for (j=0; j<y.length; j++) {
-            if (x[i] == y[j]) {
+          
+            if (x[i] == y[i]) {
             
-                z.push(y[j]);
+                z.push(y[i]);
                 // console.log(z);
                 if (z.length == y.length) {
                   console.log('This is the Guthrie sequence for 8')
+                  show.innerHTML = 'This is the Guthrie sequence for 8';
               } 
-
-            else {
-            console.log('')};
-          }
           
               
-            
-              
+          } else {
+            console.log('This is not the Guthrie sequence for 8')};
+            show.innerHTML = 'This is not the Guthrie sequence for 8';
           }
+
 
      
           
           
         }
+
+        else if (y.length == 3) {
+          for (i = 0; i<a.length; i++) {
+            
+              if (a[i] == y[i]) {
+              
+                  z.push(y[i]);
+            
+                    console.log('Missing the 2')
+                    show.innerHTML = 'Missing the 2';
+                
+            
+                
+            } 
+            else if (c[i] == y[i]) {
+              console.log('A Guthrie sequence must end with 1');
+              show.innerHTML = 'A Guthrie sequence must end with 1';
+            }
+  
+        }
+      }
+
+
+       
        
       } 
-    }
+
 
 
   </script>
