@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <p id="demo"></p>
+    <form id="myForm" class="alert alert-primary m-5">
+      <input
+        id="num1"
+        type="text"
+        class="form-control num"
+        placeholder="enter a number"
+      />
+      <input
+        id="num2"
+        type="text"
+        class="form-control num"
+        placeholder="enter a number"
+      />
+      <input
+        id="num3"
+        type="text"
+        class="form-control num"
+        placeholder="enter a number"
+      />
+      <input
+        id="num4"
+        type="text"
+        class="form-control num"
+        placeholder="enter a number"
+      />
+      <!-- Check button -->
+      <button
+        onclick="compareNumbers()"
+        type="button"
+        class="btn btn-dark btn-lg check-button"
+      >
+        <i class="fa-solid fa-apple-whole"></i>check
+      </button>
+
+      <!-- Clear form -->
+
+      <button
+      onclick="resetScreen()"
+      type="button"
+      class="btn btn-dark btn-lg clear-button"
+    >
+      <i class="fa-solid fa-apple-whole"></i>Clear
+    </button>
+
+
+  </form>
+  </body>
+  <script>
+    var y = [];
+
+    var num1 = document.getElementById("num1");
+    num1.addEventListener("input", () => {
+      var data1 = Number(num1.value);
+      y.push(data1);
+      // console.log(y);
+    });
+
+    var num2 = document.getElementById("num2");
+    num2.addEventListener("input", () => {
+      var data2 = Number(num2.value);
+      y.push(data2);
+      // console.log(y);
+    });
+
+    var num3 = document.getElementById("num3");
+    num3.addEventListener("input", () => {
+      var data3 = Number(num3.value);
+      y.push(data3);
+      // console.log(y);
+    });
+
+    var num4 = (document.getElementById("num4"));
+    num4.addEventListener("input", () => {
+      var data4 = Number(num4.value);
+      y.push(data4);
+      // console.log(y);
+    });
+
+    var x = [8, 4, 2, 1];
+    var a = [8, 4, 1];
+    var b = [8, 17, 4, 1];
+    var c = [8, 4, 2];
+
+    var z = [];
+    var show = document.getElementById("demo");
+
+    // Clear screen
+     function resetScreen() {
+  document.getElementById("myForm").reset();
+  location.reload();
+}
+
+    // Compare the numbers
+    function compareNumbers() {
+      if (x.length == y.length) {
+        for (i = 0; i<x.length; i++) {
+          
+            if (x[i] == y[i]) {
+            
+                z.push(y[i]);
+                // console.log(z);
+                if (z.length == y.length) {
+                  console.log('This is the Guthrie sequence for 8')
+                  show.innerHTML = 'This is the Guthrie sequence for 8';
+              } 
+          
+              
+          } else {
+            console.log('This is not the Guthrie sequence for 8')};
+            show.innerHTML = 'This is not the Guthrie sequence for 8';
+          }
+
+
+     
+          
+          
+        }
+
+        else if (y.length == 3) {
+          for (i = 0; i<a.length; i++) {
+            
+              if (a[i] == y[i]) {
+              
+                  z.push(y[i]);
+            
+                    console.log('Missing the 2')
+                    show.innerHTML = 'Missing the 2';
+                
+            
+                
+            } 
+            else if (c[i] == y[i]) {
+              console.log('A Guthrie sequence must end with 1');
+              show.innerHTML = 'A Guthrie sequence must end with 1';
+            }
+  
+        }
+      }
+
+
+       
+       
+      } 
+
+
+
+  </script>
+  <!-- Bootstrap CDN -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</html>
