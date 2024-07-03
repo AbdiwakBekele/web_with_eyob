@@ -99,3 +99,55 @@ function question3() {
 }
 
 
+/**
+ * Question 4
+ * Write a function named isNUnique that returns 1 if its integer array argument is n-unique,
+ * otherwise it returns 0. So isNUnique(new int[ ]{2, 7, 3, 4}, 5) should return 1 and
+ * isNUnique(new int[] {2, 3, 3, 7}, 5) should return 0.
+ */
+
+// x is array, y is integer
+function isNUnique(x, y) {
+
+    var count = 0;
+
+    for (var i = 0; i < x.length; i++) {
+
+        for (var j = i + 1; j < x.length; j++) {
+            var result = x[i] + x[j];
+            if (result == y) {
+                count++;
+            }
+        }
+    }
+
+    if (count == 1) {
+        return 1;
+    }
+    return 0;
+}
+
+
+/**
+ * Question 5
+ * Define an array to be sum-safe if none of its elements is equal to the sum of its elements. The array
+ * a = {5, -5, 0} is not sum-safe because the sum of its elements is 0 and a[2] == 0. However, the
+ * array a = {5, -2, 1} is sum-safe because the sum of its elements is 4 and none of its elements
+ * equal 4.
+ */
+
+// x is array
+function isSumSafe(x) {
+    // Total sum of all
+    var totalSum = 0;
+    for (var i = 0; i < x.length; i++) {
+        totalSum += x[i];
+    }
+
+    for (var i = 0; i < x.length; i++) {
+        if (totalSum == x[i]) {
+            return 0
+        }
+    }
+    return 1;
+}
