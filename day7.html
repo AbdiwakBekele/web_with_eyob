@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="isTrivalent()">Click</button>
+
+
+    <script>
+
+        function isTrivalent() {
+            var x = [22, 19, 19, 10, 10, 22, 10,];
+            var y = [];
+
+            for (var i = 1; i < x.length; i++) {
+
+                var result = isUnique(x[i], y);
+                if (result) {
+                    y.push(x[i]);
+                }
+            }
+            if (y.length == 3) {
+                console.log("Is Trivalent");
+            } else {
+                console.log("Is not trivalent");
+            }
+        }
+
+        function isUnique(a, b) {
+            var count = 0;
+            for (var j = 0; j < b.length; j++) {
+                if (a == b[j]) {
+                    count++;
+                }
+            }
+
+            if (count == 0) {
+                return true;
+            }
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>
