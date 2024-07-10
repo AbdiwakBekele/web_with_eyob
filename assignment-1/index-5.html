@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="alert alert-primary m-5">
+        <input id="numberInput" type="text" placeholder="Enter number">
+    </form>
+    
+</body>
+
+
+<script>
+
+var x = '32501';
+var y = [3, 2, 5, 0, 1];
+var a = [];
+
+z = x.split('');
+// console.log(z);
+console.log(z.length);
+
+for (var i=0; i<z.length; i++) {
+    
+    a.push(Number(z[i]));
+    
+}
+console.log(a);
+
+
+for (var i=0; i<a.length; i++) {
+
+    if (a[i] == y[i]) {
+        console.log('1');
+    }
+    else if (a.length > y.length) {
+        console.log('0');
+    }
+
+}
+
+
+
+</script>
+</html>
