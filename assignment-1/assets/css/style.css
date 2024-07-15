@@ -142,6 +142,16 @@ h2 {
   /* overflow: hidden; */
 }
 
+#confirmtoggler {
+  position: absolute;
+  top: 72%;
+  right: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+
+}
+
 #register-password {
   font-family: "inter", sans-serif, serif;
 

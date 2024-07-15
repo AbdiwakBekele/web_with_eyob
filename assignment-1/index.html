@@ -114,9 +114,9 @@
  <div class="form-group password-container">
 <label id="register-name" for="inputPassword5" class="form-label">Password</label>
 
-  <input   type="password" class="form-control" aria-describedby="passwordHelpBlock" required>
+  <input id="password"  type="password" class="form-control" aria-describedby="passwordHelpBlock">
   
-  <i id="toggler"class="far fa-eye"></i>
+  <i onclick="showHide()" id="toggler"class="far fa-eye"></i>
 
   
 </div>
@@ -130,8 +130,8 @@ Must be at least 8 characters.
 <label id="register-name" for="inputPassword5" class="form-label">Confirm password</label>
 
 
-  <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="">
-    <span><i id="toggler"class="far fa-eye"></i></span>
+  <input id="Confirmpassword" type="password"  class="form-control" aria-describedby="passwordHelpBlock" placeholder="">
+    <i onclick="showPassword()" id="confirmtoggler"class="far fa-eye"></i>
 </div>
 
 <!-- Terms and policy -->
@@ -151,7 +151,7 @@ Must be at least 8 characters.
 </div>
 
 <div class="login">Already have an account?
-  <a id="login-link" href="#">Login</a>
+  <a id="login-link" href="#">Login</count>
 
 </div>
 
@@ -168,6 +168,44 @@ Must be at least 8 characters.
 </body>
 
 <script>
+
+  function showPassword() {
+  
+    if (document.getElementById('Confirmpassword').type == 'password') {
+    document.getElementById('confirmtoggler').classList = 'far fa-eye-slash'
+    document.getElementById('Confirmpassword').type = 'text';   
+
+
+  } else {
+    document.getElementById('confirmtoggler').classList = 'far fa-eye'
+    document.getElementById('Confirmpassword').type = 'password';   
+  }
+
+  }
+
+function showHide () {
+  if (document.getElementById('password').type == 'password') {
+    document.getElementById('toggler').classList = 'far fa-eye-slash'
+    document.getElementById('password').type = 'text';   
+
+
+  } else {
+    document.getElementById('toggler').classList = 'far fa-eye'
+    document.getElementById('password').type = 'password';   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
   </script>
 
