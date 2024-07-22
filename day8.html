@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        console.log(isPacked());
+
+        function clusterCompression() {
+            var x = [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1];
+            var y = [];
+
+            for (var i = 0; i < x.length - 1; i++) {
+                if (i == x.length - 2) {
+                    if (x[i] == x[i + 1]) {
+                        y.push(x[i]);
+                    } else {
+                        y.push(x[i]);
+                        y.push(x[i + 1]);
+                    }
+                } else {
+                    if (x[i] != x[i + 1]) {
+                        y.push(x[i]);
+                    }
+                }
+            }
+            console.log(y);
+        }
+
+        // Prime - Composite
+        function isPrime(x) {
+            var x = [1, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9,];
+        }
+
+
+        //is Packed
+        function isPacked() {
+            var x = [4, 4, 4, 4, 1, 2, 2, 3, 3, 3];
+
+            var length = x[0];
+            var count = 0;
+
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] == length) {
+                    count++;
+                } else {
+                    if (count != length) {
+                        return 0;
+                    } else {
+                        length = x[i];
+                        count = 1;
+                    }
+                }
+            }
+
+            if (count != length) {
+                return 0;
+            }
+            return 1;
+        }
+
+    </script>
+</body>
+
+</html>
