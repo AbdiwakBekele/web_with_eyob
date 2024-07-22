@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+    }
+</style>
+
+<body>
+
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+
+        class Animal {
+
+            breath() {
+                return 'can breath';
+            }
+        }
+
+        class Human extends Animal {
+
+            data = 10;
+
+            get dataValue() {
+                return this.data;
+            }
+
+            set dataValue(y) {
+                this.data = y * 10;
+            }
+        }
+
+        class Abdiwak extends Human {
+
+        }
+
+        var abdiwak = new Abdiwak();
+        console.log(abdiwak.breath());
+
+
+        // var x = new Human('Abdiwak');
+        // x.dataValue = 20;
+
+        // console.log(x.dataValue);
+
+
+
+
+
+        //Animation
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
