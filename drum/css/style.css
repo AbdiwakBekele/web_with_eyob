@@ -42,6 +42,7 @@ h1 {
 }
 #tom1 {
   background-image: url(/images/tom1.png);
+  transition: transform 0.3s ease;
 }
 #tom2 {
   background-image: url(/images/tom2.png);
@@ -63,4 +64,9 @@ h1 {
 }
 #snare {
   background-image: url(/images/snare.png);
+}
+
+.animate {
+  box-shadow: 8px 7px 0 0 #3f4c6c;
+  opacity: 0.5;
 }
