@@ -1,0 +1,66 @@
+body {
+  background-color: #29304a;
+}
+
+h1 {
+  font-family: "ubuntu";
+  font-size: 72px;
+  font-weight: bold;
+  background-image: url(/images/drum-kit.jpg);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  color: transparent;
+}
+
+.instrument {
+  background-color: white;
+  border: 10px solid #3f4c6c;
+  border-radius: 20px;
+  box-shadow: 8px 7px 0 0 #931557;
+  margin: auto;
+  background-size: calc(100% - 10px) calc(100% - 10px);
+  width: 130px;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.drum1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.drum2 {
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#tom1 {
+  background-image: url(/images/tom1.png);
+}
+#tom2 {
+  background-image: url(/images/tom2.png);
+}
+#kick {
+  background-image: url(/images/kick.png);
+}
+
+#crash {
+  background-image: url(/images/crash.png);
+}
+
+#tom3 {
+  background-image: url(/images/tom3.png);
+}
+
+#tom4 {
+  background-image: url(/images/tom4.png);
+}
+#snare {
+  background-image: url(/images/snare.png);
+}
